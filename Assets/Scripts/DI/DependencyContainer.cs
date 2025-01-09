@@ -3,7 +3,7 @@ using System;
 
 public class DependencyContainer
 {
-    private Dictionary<Type, object> _services = new Dictionary<Type, object>();
+    private readonly Dictionary<Type, object> _services = new Dictionary<Type, object>();
 
     public void Register<T>(T implementation)
     {

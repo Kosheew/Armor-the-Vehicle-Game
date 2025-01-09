@@ -38,6 +38,7 @@ namespace ObjectPool
         {
             obj.gameObject.SetActive(true);
             activeObjects.Add(obj);
+            
         }
 
         private T OnCreateObject()
@@ -62,5 +63,7 @@ namespace ObjectPool
         public int CountInactive => pool.CountInactive;
 
         public int CountActive => activeObjects.Count;
+
+        public int PoolSize => pool.CountAll;
     }
 }
